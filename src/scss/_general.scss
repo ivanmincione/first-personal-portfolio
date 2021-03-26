@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+	background-color: $colorBlack;
+    color: $colorGreyLight;
+    overflow-x: hidden;
+    -ms-text-size-adjust: 100%;
+}
+
+h1{
+    text-transform: uppercase;
+    color: $colorGreenLight;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+
+}
+
+.container{
+    max-width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    border-bottom: 1px solid $colorGreenLight;
+}
+
+section{
+    padding: $spacing * 2;
+
+    @media screen and ( max-width: 800px) {
+        padding: $spacing;
+    }
+    @media screen and ( max-width: 400px) {
+        padding: $spacing 0;
+    }
+}

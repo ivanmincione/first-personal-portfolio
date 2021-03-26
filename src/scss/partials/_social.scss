@@ -1,0 +1,142 @@
+#social-section{
+    background: rgb(11,12,16);
+    background: linear-gradient(180deg, rgba(11,12,16,1) 14%, rgba(255,255,255,1) 100%);
+    position: relative;
+
+    #decoration-3{
+        position: absolute;
+        top: -400%;
+        right: -5%;
+        z-index: -1;
+    }
+
+    ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+    }
+
+    .row{
+        background-color:transparent;
+        flex:3;
+    }
+
+    .row ul{
+        display:flex;
+        justify-content:space-evenly;
+        list-style-type:none;
+        align-items:center;
+        height:100px;
+        color:#fff;
+    }
+
+    #icon-pack-2 ul li a .fab {
+        font-size: $fontSize * 1.5;
+        color:#262626;
+        line-height: $spacing * 2;
+        transition:.5s;
+        -webkit-transition:.5s;
+        -moz-transition:.5s;
+        -o-transition:.5s;
+
+    }
+
+    #icon-pack-2 ul li a {
+        position:relative;
+        margin:0 5px;
+        display:block;
+        width:40px;
+        height:40px;
+        border-radius:2px 4px 2px 0px;
+        background-color:#eee;
+        text-align:center;
+        transform:perspective(1000px) rotate(-20deg) skew(25deg) translate(0,0);
+        -webkit-transform:perspective(1000px) rotate(-20deg) skew(25deg) translate(0,0);
+        -moz-transform:perspective(1000px) rotate(-20deg) skew(25deg) translate(0,0);
+        -o-transform:perspective(1000px) rotate(-20deg) skew(25deg) translate(0,0);
+        box-shadow:-10px 10px 10px rgba(0,0,0,0.5);
+        -webkit-box-shadow:-10px 10px 10px rgba(0,0,0,0.5);
+        -moz-box-shadow:-10px 10px 10px rgba(0,0,0,0.5);
+        -o-box-shadow:-10px 10px 10px rgba(0,0,0,0.5);
+        transition:.5s;
+        -webkit-transition:.5s;
+        -moz-transition:.5s;
+        -o-transition:.5s;
+
+    }
+
+    #icon-pack-2 ul li a:before{
+        content:"";
+        position:absolute;
+        top:5px;
+        left:-10px;
+        height:100%;
+        width:10px;
+        border-radius:2px 2px 0px 0px;
+        background-color:#b1b1b1;
+        transform:rotate(0deg) skewX(-45deg);
+        -webkit-transform:rotate(0deg) skewY(-45deg);
+        -moz-transform:rotate(0deg) skewY(-45deg);
+        -o-transform:rotate(0deg) skewY(-45deg);
+        transition:.5s;
+        -webkit-transition:.5s;
+        -moz-transition:.5s;
+        -o-transition:.5s;
+    }
+
+    #icon-pack-2 ul li a:after{
+        content:"";
+        position:absolute;
+        bottom:-10px;
+        right:5px;
+        height:10px;
+        width:100%;
+        border-radius:2px 2px 2px 0px;
+        background-color:#b1b1b1;
+        transform:rotate(0deg) skewX(-45deg);
+        -webkit-transform:rotate(0deg) skewX(-45deg);
+        -moz-transform:rotate(0deg) skewX(-45deg);
+        -o-transform:rotate(0deg) skewX(-45deg);
+        transition:.5s;
+        -webkit-transition:.5s;
+        -moz-transition:.5s;
+        -o-transition:.5s;
+    }
+
+    #icon-pack-2 ul li a:hover{
+        transform:perspective(1000px) rotate(-20deg) skew(25deg) translate(10px,-10px);
+        -webkit-transform:perspective(1000px) rotate(-20deg) skew(25deg) translate(10px,-10px);
+        -moz-transform:perspective(1000px) rotate(-20deg) skew(25deg) translate(10px,-10px);
+        -o-transform:perspective(1000px) rotate(-20deg) skew(25deg) translate(10px,-10px);
+        box-shadow:-30px 30px 30px rgba(0,0,0,0.5);
+        -webkit-box-shadow:-30px 30px 30px rgba(0,0,0,0.5);
+        -moz-box-shadow:-30px 30px 30px rgba(0,0,0,0.5);
+        -o-box-shadow:-30px 30px 30px rgba(0,0,0,0.5);
+        cursor:pointer;
+    }
+
+    #icon-pack-2 ul li:hover .fab{color:#fff;}
+    #icon-pack-2 ul li:hover:nth-child(1) a{
+         background-color:#3b5999;}
+    #icon-pack-2 ul li:hover:nth-child(2) a{
+        background:#414141;}
+    #icon-pack-2 ul li:hover:nth-child(3) a{
+        background-color:#d02d4c;}
+
+
+    #icon-pack-2 ul li:hover:nth-child(1) a:before{
+         background-color:#2e4a86;}
+    #icon-pack-2 ul li:hover:nth-child(2) a:before{
+        background:#000;   }
+    #icon-pack-2 ul li:hover:nth-child(3) a:before{
+        background-color:#d02d4c;}
+
+
+    #icon-pack-2 ul li:hover:nth-child(1) a:after{
+         background-color:#4a69ad;}
+    #icon-pack-2 ul li:hover:nth-child(2) a:after{
+        background:#000;  }
+    #icon-pack-2 ul li:hover:nth-child(3) a:after{
+        background-color:#f1395c;}
+}

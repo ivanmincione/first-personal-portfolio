@@ -1,0 +1,186 @@
+//-------------------FORM CONTACT ---------------------------
+#contact-section {
+    position: relative;
+
+    #contact-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #contact-area {
+      color: $colorGreenLight;
+      width: 400px;
+      padding: $spacing;
+
+      form{
+          width: 100%;
+          height: 100%;
+      }
+    }
+
+    #contact-area input, #contact-area textarea {
+      width: 100%;
+      padding: $spacing / 2;
+      font-size:$fontSize;
+      color: $colorGreenLight;
+      background-color:transparent;
+      margin-bottom:$spacing;
+    }
+
+    #contact-area textarea {
+      height: 150px;
+      background-color:transparent;
+      border-top: 1px solid transparent;
+      border-right: 1px solid transparent;
+      border-bottom: 1px solid #fff;
+      border-left: 1px solid transparent;
+    }
+
+    #contact-area textarea:focus, #contact-area input:focus {
+          background-color:#333;
+          border-top: 1px solid transparent;
+          border-right: 1px solid transparent;
+          border-bottom: 1px solid #fff;
+          border-left: 1px solid transparent;
+    }
+
+    #contact-area .submit-button {
+      display: block;
+      font-size:$fontSize;
+      font-weight: bold;
+      color: #fff;
+      text-transform:uppercase;
+      width: 100px;
+      background-color:transparent;
+      border: 1px solid #fff;
+      padding: $spacing / 2;
+      border-radius: 10px;
+
+      -moz-transition:all 0.1s ease-in-out;
+      -webkit-transition:all 0.1s ease-in-out;
+      -o-transition:all 0.1s ease-in-out;
+      -ms-transition:all 0.1s ease-in-out;
+      transition:all 0.1s ease-in-out;
+    }
+
+    #contact-area .submit-button:hover {
+      color: $colorGreen;
+      background-color:$colorGreenLight;
+      cursor: pointer;
+    }
+
+    ::-webkit-input-placeholder {
+      color: #fff;
+      font-size:14px;
+    }
+
+    :-moz-placeholder { /* Firefox 18- */
+      color: #fff;
+      font-size:14px;
+    }
+
+    ::-moz-placeholder {  /* Firefox 19+ */
+      color: #fff;
+      font-size:14px;
+    }
+
+    :-ms-input-placeholder {
+       color: #fff;
+      font-size:14px;
+    }
+}
+
+
+// _____________________EMAIL ANIMATION___________________________
+
+#email-animation{
+    /* bg */
+    .st0{fill:transparent; stroke:transparent; stroke-width:4.9046;stroke-miterlimit:10;}
+    /* Color email body */
+    .st1{fill:$colorGreen;}
+    /* colore delle sciee dietro la busta */
+    .st2{clip-path:url(#SVGID_2_);fill:$colorGreenLight;}
+    /* Border circle */
+    .st3{fill: transparent;}
+
+    .email-ani {
+        -webkit-animation: email 3s cubic-bezier(.57,.08,.52,.91) infinite alternate; /* Safari 4+ */
+        -moz-animation:    email 3s cubic-bezier(.57,.08,.52,.91) infinite alternate; /* Fx 5+ */
+        -o-animation:      email 3s cubic-bezier(.57,.08,.52,.91) infinite alternate; /* Opera 12+ */
+        animation:         email 3s cubic-bezier(.57,.08,.52,.91) infinite alternate; /* IE 10+, Fx 29+ */
+    }
+
+    .swish-ani-1 {
+        -webkit-animation: swish-1 0.8s linear infinite; /* Safari 4+ */
+        -moz-animation:    swish-1 0.8s linear infinite; /* Fx 5+ */
+        -o-animation:      swish-1 0.8s linear infinite; /* Opera 12+ */
+        animation:         swish-1 0.8s linear infinite; /* IE 10+, Fx 29+ */
+    }
+
+    .swish-ani-2 {
+        -webkit-animation: swish-2 1.5s linear infinite; /* Safari 4+ */
+        -moz-animation:    swish-2 1.5s linear infinite; /* Fx 5+ */
+        -o-animation:      swish-2 1.5s linear infinite; /* Opera 12+ */
+        animation:         swish-2 1.5s linear infinite; /* IE 10+, Fx 29+ */
+    }
+
+    .swish-ani-3 {
+        -webkit-animation: swish-3 1s linear infinite; /* Safari 4+ */
+        -moz-animation:    swish-3 1s linear infinite; /* Fx 5+ */
+        -o-animation:      swish-3 1s linear infinite; /* Opera 12+ */
+        animation:         swish-3 1s linear infinite; /* IE 10+, Fx 29+ */
+    }
+
+    @-webkit-keyframes email {
+        0%   { -webkit-transform: translateY(-7px); /* Safari */}
+        50% { -webkit-transform: translateY(7px); /* Safari */}
+    }
+    @-moz-keyframes email {
+        0%   { -moz-transform: translateY(-7px);}
+        50% { -moz-transform: translateY(7px);}
+    }
+    @keyframes email {
+        0%   { transform: translateY(-7px);}
+        50% { transform: translateY(7px);}
+    }
+
+    @-webkit-keyframes swish-1 {
+        0%   { -webkit-transform: translateX(90px); /* Safari */}
+        100% { -webkit-transform: translateX(-100px); /* Safari */}
+    }
+    @-moz-keyframes swish-1 {
+        0%   { -moz-transform: translateX(90px);}
+        100% { -moz-transform: translateX(-100px);}
+    }
+    @keyframes swish-1 {
+        0%   { transform: translateX(90px);}
+        100% { transform: translateX(-100px);}
+    }
+
+    @-webkit-keyframes swish-2 {
+        0%   { -webkit-transform: translateX(120px); /* Safari */}
+        100% { -webkit-transform: translateX(-100px); /* Safari */}
+    }
+    @-moz-keyframes swish-2 {
+        0%   { -moz-transform: translateX(120px);}
+        100% { -moz-transform: translateX(-100px);}
+    }
+    @keyframes swish-2 {
+        0%   { transform: translateX(120px);}
+        100% { transform: translateX(-100px);}
+    }
+
+    @-webkit-keyframes swish-3 {
+        0%   { -webkit-transform: translateX(90px); /* Safari */}
+        100% { -webkit-transform: translateX(-100px); /* Safari */}
+    }
+    @-moz-keyframes swish-3 {
+        0%   { -moz-transform: translateX(90px);}
+        100% { -moz-transform: translateX(-100px);}
+    }
+    @keyframes swish-3 {
+        0%   { transform: translateX(90px);}
+        100% { transform: translateX(-100px);}
+    }
+}
