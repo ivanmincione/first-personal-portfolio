@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Ivan Mincione - Web Dev</title>
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+
+        <!-- FONTAWESOME -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
+        <!-- CHARTjs -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
+
+        <!-- SLIDER PROJECTS -->
+        <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+        <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CSSRulePlugin3.min.js"></script>
+
+        <!-- library for Fade effect unpkg.com -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+        <!-- JQUERY -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <!-- STYLE -->
+        <link rel="stylesheet" href="dist/css/app.css">
+    </head>
+    <body>
+        <a name="haut" id="haut"></a>
+        <!-- INIZIO SEZIONE HERO -->
+        <section id="hero-section">
+            <!-- BACKGROUND NEON RAIN -->
+            <canvas id="canvas-club" width="200px" height="200px" ></canvas>
+            <!-- LOGO ANIMATION -->
+            <div class="brand">
+                <div class="logo">
+                    <svg width="200px" height="200px" >
+                        <path stroke="#66fcf1" stroke-width="0" fill="#66fcf1" d="M140.773,59.227C137.316,55.771,130.055,50,100,50
+                        s-37.317,5.771-40.774,9.227C55.77,62.684,49.999,69.104,50,100c-0.001,30.896,5.77,37.316,9.227,40.773
+                        C62.683,144.229,69.103,150,100,150c30.895,0,37.317-5.771,40.772-9.227C144.229,137.316,150,130.896,150,100
+                        S144.229,62.683,140.773,59.227z"/>
+
+                        <path stroke="#66fcf1" stroke-width="0" fill="#66fcf1" d="M140.773,59.227C137.316,55.771,130.055,50,100,50
+                        s-37.317,5.771-40.774,9.227C55.77,62.684,49.999,69.104,50,100c-0.001,30.896,5.77,37.316,9.227,40.773
+                        C62.683,144.229,69.103,150,100,150c30.895,0,37.317-5.771,40.772-9.227C144.229,137.316,150,130.896,150,100
+                        S144.229,62.683,140.773,59.227z"/>
+
+                        <path stroke="#66fcf1" stroke-width="0" fill="#66fcf1" d="M140.773,59.227C137.316,55.771,130.055,50,100,50
+                        s-37.317,5.771-40.774,9.227C55.77,62.684,49.999,69.104,50,100c-0.001,30.896,5.77,37.316,9.227,40.773
+                        C62.683,144.229,69.103,150,100,150c30.895,0,37.317-5.771,40.772-9.227C144.229,137.316,150,130.896,150,100
+                        S144.229,62.683,140.773,59.227z"/>
+                    </svg>
+                </div>
+            </div>
+            <!-- MENU ASIDE -->
+            <div class="menu">
+                <p><a href="#skills-section">Skills</a></p>
+                <p><a href="#project-section">Project</a></p>
+                <p><a href="#contact-section">Contact</a></p>
+            </div>
+            <div class="menu__toggler">
+                <span></span>
+            </div>
+        </section>
+        <!-- FINE MENU ASIDE -->
+
+        <!-- HERO TEXT ANIMATION -->
+        <section class="mast">
+            <header class="mast__header">
+              <h1 class="mast__title js-spanize">Hi, I'm Ivan</h1>
+              <hr class="sep"/>
+              <p class="mast__text js-spanize">
+                  Full Stack Web Developer / UI-UX Developer.
+              </p>
+            </header>
+        </section>
+        <!-- FINE SEZIONE HERO -->
+
+        <!-- INIZIO SEZIONE AFORISM -->
+        <section id="aforism-section">
+            <img id="decoration-1" src="dist/img/dec-1.png" alt="">
+            <div class="container">
+                <div id="lampadario">
+                    <input id="on" type="radio" name="switch" value="on" />
+                    <input id="off" type="radio" name="switch" value="off" checked="checked"/>
+                    <label id="switch" for="switch"></label>
+                    <div id="filo"></div>
+                    <div id="lampadina">
+                        <div id="sorpresa">
+                            <div id="footer-aforism">
+                                <p>
+                                    “Good developers just know how to write...
+                                    but the best ones know how to rewrite.”
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FINE SEZIONE AFORISM -->
+
+        <!-- INIZIO SEZIONE SKILLS -->
+        <section id="skills-section">
+            <img id="decoration-2" src="dist/img/dec-2.png" alt="">
+            <div class="container">
+                <h1 class="display-4">My Skills</h1>
+                <ul class="skills list-unstyled ">
+                    <li class="skills__item" data-aos="fade-right" data-aos-delay="100" data-aos-duration="500" >
+                        <figure>
+                            <canvas id="html_css" width="200" height="200"></canvas>
+                            <figcaption>Semantic HTML5 & CSS3<br>(Bootstrap - Sass)</figcaption>
+                        </figure>
+                    </li>
+                    <li class="skills__item" data-aos="fade-right" data-aos-delay="100" data-aos-duration="500">
+                        <figure>
+                            <canvas id="javascript" width="200" height="200"></canvas>
+                            <figcaption>Javascript ES6<br>(jQuery - TS - Handlebars)</figcaption>
+                        </figure>
+                    </li>
+                    <li class="skills__item" data-aos="fade-right" data-aos-delay="100" data-aos-duration="500">
+                        <figure>
+                            <canvas id="vue" width="200" height="200"></canvas>
+                            <figcaption>Vue.js</figcaption>
+                        </figure>
+                    </li>
+                    <li class="skills__item" data-aos="fade-right" data-aos-delay="100" data-aos-duration="500">
+                        <figure>
+                            <canvas id="laravel" width="200" height="200"></canvas>
+                            <figcaption>Laravel</figcaption>
+                        </figure>
+                    </li>
+                    <li class="skills__item" data-aos="fade-right" data-aos-delay="100" data-aos-duration="500">
+                        <figure>
+                            <canvas id="php" width="200" height="200"></canvas>
+                            <figcaption>PHP</figcaption>
+                        </figure>
+                    </li>
+                    <li class="skills__item" data-aos="fade-right" data-aos-delay="100" data-aos-duration="500">
+                        <figure>
+                            <canvas id="mysql" width="200" height="200"></canvas>
+                            <figcaption>MySQL</figcaption>
+                        </figure>
+                    </li>
+                    <li class="skills__item" data-aos="fade-right" data-aos-delay="100" data-aos-duration="500">
+                        <figure>
+                            <canvas id="ui-ux" width="200" height="200"></canvas>
+                            <figcaption>UI/UX Design <br>(Adobe Creative Suite)</figcaption>
+                        </figure>
+                    </li>
+                    <li class="skills__item" data-aos="fade-right" data-aos-delay="100" data-aos-duration="500">
+                        <figure>
+                            <canvas id="others" width="200" height="200"></canvas>
+                            <figcaption>Git - WP - IDE - Office</figcaption>
+                        </figure>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- FINE SEZIONE SKILLS -->
+
+        <!-- INIZIO SEZIONE PROGETTI -->
+        <section id="project-section">
+            <div class="container">
+                <div class="">
+                    <h1>Projects</h1>
+                </div>
+                <div class="slider" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="800">
+
+                    <div class="box1 box">
+                        <div class="bg"></div>
+                        <div class="details">
+                            <h1>Comics</h1>
+                            <p>
+                                Reproduction of a DC-Comics website. Developed in Laravel.
+                            </p>
+                            <button> <a href="https://github.com/ivanmincione/laravel-comics">Go to project</a> </button>
+                        </div>
+                        <div class="illustration">
+                            <div class="inner">
+                                <img src="dist/img/img1.png" alt="Comics">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="box2 box">
+                        <div class="bg"></div>
+                        <div class="details">
+                            <h1>Send a message on WhatsApp...</h1>
+                            <p>
+                                Interface reproduction of WhatsApp Web. Implement chat search and send messages with random responses.
+                            </p>
+                            <button> <a href="https://github.com/ivanmincione/vue-boolzapp">Go to project</a> </button>
+
+                        </div>
+                        <div class="illustration">
+                            <div class="inner">
+                                <img src="dist/img/img2.png" alt="WhatsApp">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box3 box">
+                        <div class="bg"></div>
+                        <div class="details">
+                            <h1>Like real Netflix?</h1>
+                            <p>
+                                Reproduction of a Netflix website. Developed with VUEjs.
+                            </p>
+                            <button> <a href="https://github.com/ivanmincione/vue-boolflix">Go to project</a> </button>
+                        </div>
+                        <div class="illustration">
+                            <div class="inner">
+                                <img src="dist/img/img3.png" alt="Boolflix">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box4 box">
+                        <div class="bg"></div>
+                        <div class="details">
+                            <h1>Parallax Effect</h1>
+                            <p>
+                                Example of Parallax effect developed with Javascript - Css - Html.
+                            </p>
+                            <button> <a href="https://github.com/ivanmincione/Ironman-parallax-effect-Js">Go to project</a> </button>
+                        </div>
+                        <div class="illustration">
+                            <div class="inner">
+                                <img src="dist/img/img4.png" alt="Parallax Effect">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box5 box">
+                        <div class="bg"></div>
+                        <div class="details">
+                            <h1>Deliveroo?<br>No DeliveBoo!</h1>
+                            <p>
+                                Creation of a site in Laravel divided into back office (restaurant admin) and front office (users).
+                                Implemented the management of the restaurant (CRUD) and the possibility of placing orders with relative payment ....
+                            </p>
+                            <button> <a href="https://github.com/ivanmincione/final-project-deliveboo">Go to project</a> </button>
+                        </div>
+                        <div class="illustration">
+                            <div class="inner">
+                                <img src="dist/img/img5.png" alt="Deliveboo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- arrow slider -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="prev" width="56.898" height="91" viewBox="0 0 56.898 91"><path d="M45.5,0,91,56.9,48.452,24.068,0,56.9Z" transform="translate(0 91) rotate(-90)" fill="#fff"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="next" width="56.898" height="91" viewBox="0 0 56.898 91"><path d="M45.5,0,91,56.9,48.452,24.068,0,56.9Z" transform="translate(56.898) rotate(90)" fill="#fff"/></svg>
+                <div class="trail">
+                        <div class="box1 active">1</div>
+                        <div class="box2">2</div>
+                        <div class="box3">3</div>
+                        <div class="box4">4</div>
+                        <div class="box5">5</div>
+                </div>
+                <div class="profile-git">
+                    <a href="https://github.com/ivanmincione"><i class="fab fa-github"></i></a>
+                    <p>See all projects</p>
+                </div>
+            </div>
+        </section>
+        <!-- FINE SEZIONE PROGETTI -->
+
+        <!-- SEZIONE CONTATTI -->
+        <section id="contact-section">
+            <div class="">
+                <h1>Contact Me</h1>
+            </div>
+            <!-- ANIMAZIONE EMAIL -->
+            <div id="email-animation">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                       width="200px" height="200px" viewBox="0 0 150 150" style="enable-background:new 0 0 150 150;" xml:space="preserve">
+                    <circle id="bg" class="st0" cx="75" cy="75" r="72.548"/>
+                    <g id="email-icon" class="email-ani">
+                        <polygon class="st1" points="64,58.665 64,85.71 82.422,73.395   "/>
+                        <polyline class="st1" points="94.527,79.456 125.095,55 64,55  "/>
+                        <polygon class="st1" points="125,85.71 125,58.709 106.424,73.516  "/>
+                        <polygon class="st1" points="94.621,83 84.248,75.466 64,89.249 64,96 125,96 125,89.09 104.662,75.466  "/>
+                    </g>
+                    <g>
+                      <defs>
+                        <clipPath id="SVGID_2_">
+                                <path id="SVGID_1_" d="M2.452,75c0,7.249,1.077,14.245,3.056,20.85h58.64V54.882H5.301C3.459,61.273,2.452,68.017,2.452,75z"/>
+                        </clipPath>
+                      </defs>
+                      </g>
+                      <g clip-path="url(#SVGID_2_)">
+                        <polygon class="st2 swish-ani-1" points="60.299,61.227 20.208,59.117 20.208,59.117 60.299,56.191  " opacity=".5">
+                        </polygon>
+                        <polygon class="st2 swish-ani-2" points="40.254,77.985 0.162,75.874 0.162,75.874 40.254,72.948" opacity=".15">
+                        </polygon>
+                        <polygon class="st2 swish-ani-3" points="69.869,93.699 29.777,91.589 29.777,91.589 69.869,88.662  " opacity=".35">
+                        </polygon>
+                    </g>
+                    <g id="outline">
+                      <path class="st3" d="M75,150c-41.355,0-75-33.645-75-75C0,33.645,33.645,0,75,0c41.355,0,75,33.645,75,75
+                        C150,116.355,116.355,150,75,150z M75,4.905C36.35,4.905,4.905,36.35,4.905,75S36.35,145.096,75,145.096
+                        S145.096,113.651,145.096,75S113.651,4.905,75,4.905z"/>
+                    </g>
+                </svg>
+            </div>
+            <div id="contact-wrap">
+                <div id="contact-area">
+                  <form name="contact" netlify >
+                    <input type="text" name="Name" id="Name" placeholder="Full Name" />
+                    <input type="text" name="City" id="City" placeholder="City"/>
+                    <input type="text" name="Email" id="Email" placeholder="Email"/>
+                    <textarea name="Message" rows="20" cols="20" id="Message" placeholder="Message"></textarea>
+                    <button class="submit-button" type="submit" name="button">Send</button>
+                  </form>
+                </div>
+            </div>
+        </section>
+        <!-- FINE SEZIONE CONTATTI -->
+
+        <!-- SEZIONE SOCIAL LINK -->
+        <section id="social-section">
+            <img id="decoration-3" src="dist/img/dec-3.png" alt="">
+            <section class="row" id="icon-pack-2">
+                <ul>
+                    <li><a><i class="fab fa-linkedin-in"></i></a> </li>
+                    <li><a><i class="fab fa-codepen"></i></a> </li>
+                    <li><a href="https://github.com/ivanmincione"><i class="fab fa-github"></i></a> </li>
+                </ul>
+            </section>
+        </section>
+        <!-- FINE SEZIONE SOCIAL -->
+
+        <!-- SEZIONE animazione -->
+        <section id="animation-bg">
+            <div class="header">
+        <!--Waves Container-->
+            <div>
+                <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                    <defs>
+                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                    </defs>
+                    <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(45, 153, 173,0.7)" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgb(102, 252, 241,0.6)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(45, 153, 173,0.4)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="rgb(102, 252, 241,0.2)" />
+                    </g>
+                </svg>
+            </div>
+        <!--Waves end-->
+        </div>
+        <!--Header ends-->
+        </section>
+        <!-- FINE SEZIONE animazione -->
+        <div><a id="cRetour" class="cInvisible" href="#haut"></a></div>
+
+
+        <!-- <script>
+            window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+            ga('create', 'UA-105392568-1', 'auto');
+            ga('send', 'pageview');
+        </script> -->
+
+        <!-- unpkg.com -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+          AOS.init();
+        </script>
+
+        <!-- JAVASCRIPT -->
+        <script src="dist/js/app.js" charset="utf-8"></script>
+    </body>
+</html>
