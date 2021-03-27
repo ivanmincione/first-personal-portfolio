@@ -8,12 +8,14 @@
 
 html {
   scroll-behavior: smooth;
+  outline: none;
+  outline-offset: none;
+  overflow-x: hidden;
 }
 
 body {
   background-color: #0b0c10;
   color: #c5c6c7;
-  overflow-x: hidden;
   -ms-text-size-adjust: 100%;
 }
 
@@ -48,6 +50,11 @@ section {
   }
 }
 
+@media screen and (max-width: 600px) {
+  #decoration-1, #decoration-2, #decoration-3 {
+    display: none;
+  }
+}
 #hero-section {
   position: relative;
   /*
@@ -1356,371 +1363,136 @@ figcaption {
   text-align: center;
 }
 
-#project-section h1 {
+#project-section {
+  position: relative;
+}
+#project-section .cards-box {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#project-section .cards-box .box {
+  width: 400px;
+  height: 300px;
+  position: relative;
   text-align: center;
-  font-size: 40px;
-  color: #66fcf1;
-  margin-bottom: 40px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 20px;
 }
-@media screen and (max-width: 650px) {
-  #project-section h1 {
-    font-size: 20px;
-  }
-}
-
-.illustration .inner img {
+#project-section .cards-box .main-img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 20px;
 }
-@media only screen and (max-width: 400px) {
-  .illustration .inner img {
-    width: 80%;
-  }
-}
-
-.container {
-  position: relative;
-  overflow: hidden;
-}
-@media only screen and (max-width: 1000px) {
-  .container {
-    border-radius: 0;
-  }
-}
-
-.slider {
-  display: flex;
-  width: 500%;
-  height: 100%;
-  transition: all 0.25s ease-in;
-  transform: translateX(0);
-  margin-bottom: 40px;
-  border-radius: 50px;
-}
-@media only screen and (max-width: 1000px) {
-  .slider {
-    height: 100vh;
-  }
-}
-.slider .box {
-  height: 80%;
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  overflow: hidden;
-  position: relative;
-  padding: 20px;
-  border-radius: 50px;
-}
-@media only screen and (max-width: 650px) {
-  .slider .box {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 1fr);
-  }
-}
-@media only screen and (max-width: 400px) {
-  .slider .box {
-    padding: 0;
-  }
-}
-.slider .box .bg {
-  background-color: rgba(0, 0, 0, 0.3);
-  width: 55%;
-  transform: skewX(7deg);
+#project-section .cards-box .box-content {
   position: absolute;
-  height: 100%;
-  left: -10%;
-  transform-origin: 0 100%;
-}
-@media only screen and (max-width: 800px) {
-  .slider .box .bg {
-    width: 65%;
-  }
-}
-@media only screen and (max-width: 650px) {
-  .slider .box .bg {
-    width: 100%;
-    left: 0;
-    bottom: 0;
-    height: 54%;
-    transform: skewX(0deg);
-  }
-}
-@media only screen and (max-width: 400px) {
-  .slider .box .bg {
-    display: none;
-  }
-}
-.slider .box .bg::before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
   top: 0;
-  background-color: inherit;
-  pointer-events: none;
-  transform: skewX(10deg);
-}
-@media only screen and (max-width: 650px) {
-  .slider .box .bg::before {
-    width: 120%;
-    bottom: 0;
-    transform: skewX(0deg);
-  }
-}
-.slider .box .details {
-  padding: 20px;
-  z-index: 100;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  z-index: 9999;
+  transform: translateY(75px);
+  transition: transform 0.2s 0.2s linear;
 }
-@media only screen and (max-width: 650px) {
-  .slider .box .details {
-    padding: 0;
+#project-section .cards-box .item h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-shadow: 5px #000;
+}
+@media screen and (max-width: 400px) {
+  #project-section .cards-box .item h1 {
+    font-size: 16.6666666667px;
   }
 }
-.slider .box .details h1 {
-  font-size: 30px;
-  font-weight: 500;
-  margin-bottom: 5px;
+#project-section .cards-box .description p {
+  margin-bottom: 20px;
+  padding: 20px;
+  overflow: hidden;
 }
-@media only screen and (max-width: 650px) {
-  .slider .box .details h1 {
-    margin-top: 20px;
-  }
-}
-.slider .box .details p {
-  display: inline-block;
-  font-size: 20px;
-  color: #B5B4B4;
-  margin-bottom: 10px;
-  text-align: center;
-}
-@media only screen and (max-width: 800px) {
-  .slider .box .details p {
-    margin-right: 0;
-  }
-}
-@media only screen and (max-width: 650px) {
-  .slider .box .details p {
+@media screen and (max-width: 400px) {
+  #project-section .cards-box .description p {
     display: none;
   }
 }
-.slider .box .details button {
-  padding: 10px 20px;
-  color: #fff;
-  border-radius: 10px;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
+#project-section .cards-box .box:after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #000;
+  opacity: 0.2;
+  transition: opacity 0.2s linear;
 }
-.slider .box .details button:hover {
-  opacity: 0.8;
+#project-section .cards-box .box:hover:after {
+  opacity: 0.7;
 }
-.slider .box .details button:focus {
-  outline: none;
-  border: none;
+#project-section .cards-box .interactive {
+  display: flex;
+  justify-content: center;
 }
-.slider .box .details button a {
+#project-section .cards-box .interactive a {
+  padding: 20px;
+  background-color: #66fcf1;
+  font-size: 14px;
   color: #fff;
   font-size: 20px;
+  border-radius: 10px;
 }
-.slider .box .details button a:hover {
-  color: #2d99ad;
+#project-section .cards-box .interactive a:hover {
+  cursor: pointer;
+  background-color: #fff;
+  color: #66fcf1;
+  transition: 0.5s;
 }
-@media only screen and (max-width: 650px) {
-  .slider .box .details button {
+@media screen and (max-width: 400px) {
+  #project-section .cards-box .interactive a {
     padding: 5px;
   }
 }
-.slider .box1 {
-  background-color: #2d99ae;
-}
-.slider .box1 .illustration .inner {
-  background-color: #66fcf1;
-}
-.slider .box1 .illustration .inner::after, .slider .box1 .illustration .inner::before {
-  background-color: rgba(102, 252, 241, 0.4);
-  z-index: -1;
-}
-.slider .box1 button {
-  background-color: #66fcf1;
-}
-.slider .box2 {
-  background-color: #000050;
-}
-.slider .box2 .illustration .inner {
-  background-color: #0033FF;
-}
-.slider .box2 .illustration .inner::after, .slider .box2 .illustration .inner::before {
-  background-color: rgba(0, 51, 255, 0.4);
-  z-index: -1;
-}
-.slider .box2 button {
-  background-color: #0033FF;
-}
-.slider .box3 {
-  background-color: #00501D;
-}
-.slider .box3 .illustration .inner {
-  background-color: #00FF44;
-}
-.slider .box3 .illustration .inner::after, .slider .box3 .illustration .inner::before {
-  background-color: rgba(0, 255, 68, 0.4);
-  z-index: -1;
-}
-.slider .box3 button {
-  background-color: #00FF44;
-}
-.slider .box4 {
-  background-color: #e8db64;
-}
-.slider .box4 .illustration .inner {
-  background-color: #FF4E00;
-}
-.slider .box4 .illustration .inner::after, .slider .box4 .illustration .inner::before {
-  background-color: rgba(255, 78, 0, 0.4);
-  z-index: -1;
-}
-.slider .box4 button {
-  background-color: #FF4E00;
-}
-.slider .box5 {
-  background-color: #3e3e3e;
-}
-.slider .box5 .illustration .inner {
-  background-color: #bababa;
-}
-.slider .box5 .illustration .inner::after, .slider .box5 .illustration .inner::before {
-  background-color: rgba(186, 186, 186, 0.4);
-  z-index: -1;
-}
-.slider .box5 button {
-  background-color: #bababa;
-}
-.slider .illustration {
-  grid-column: 2/-1;
-  grid-row: 1/-1;
-  justify-self: center;
-}
-@media only screen and (max-width: 650px) {
-  .slider .illustration {
-    grid-row: 1/span 1;
-    grid-column: 1/-1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
-.slider .illustration div {
-  height: 25rem;
-  width: 18rem;
-  border-radius: 3rem;
-  background-color: #66fcf1;
-  position: relative;
-  transform: skewX(-10deg);
-}
-@media only screen and (max-width: 800px) {
-  .slider .illustration div {
-    height: 20rem;
-    width: 15rem;
-  }
-}
-.slider .illustration div::after, .slider .illustration div::before {
-  content: "";
+#project-section .cards-box .box:before {
+  content: " ";
+  border-radius: 8px;
   position: absolute;
-  height: 100%;
-  width: 100%;
-  border-radius: 3rem;
-  top: 0;
-  left: 0;
+  top: 20px;
+  left: 20px;
+  bottom: 20px;
+  right: 20px;
+  z-index: 2;
+  pointer-events: none;
+  transition: transform 0.2s linear, opacity 0.2s linear;
+  transform: scale(0.7);
+  opacity: 0;
 }
-.slider .illustration div::after {
-  transform: translate(4rem, -1rem);
+#project-section .cards-box .show-animate p, #project-section .cards-box .interactive a {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.3s 0.3s linear;
 }
-.slider .illustration div::before {
-  transform: translate(2rem, -2rem);
-}
-
-.prev,
-.next,
-.trail {
-  z-index: 10000;
-  position: absolute;
-}
-
-.prev,
-.next {
-  width: 4rem;
-  cursor: pointer;
-  opacity: 0.2;
-  transition: all 0.3s ease;
-}
-@media only screen and (max-width: 650px) {
-  .prev,
-.next {
-    display: none;
-  }
-}
-.prev:hover,
-.next:hover {
+#project-section .cards-box .box:hover .show-animate p, #project-section .cards-box .box:hover .interactive a {
   opacity: 1;
+  transform: translateY(0);
+  transition: transform 1s linear;
 }
-
-.prev {
-  top: 50%;
-  left: 2%;
-  transform: translateY(-50%);
+#project-section .cards-box .box:hover .box-content {
+  transform: translateY(0);
 }
-
-.next {
-  top: 50%;
-  right: 2%;
-  transform: translateY(-50%);
-}
-
-.trail {
-  bottom: 5%;
-  left: 50%;
-  transform: translateX(-50%);
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 1rem;
-  text-align: center;
-  font-size: 1.5rem;
-  margin-bottom: 80px;
-}
-@media only screen and (max-width: 650px) {
-  .trail {
-    bottom: 20%;
-  }
-}
-.trail div {
-  padding: 2rem;
-  border-top: 3px solid #fff;
-  cursor: pointer;
-  opacity: 0.3;
-  transition: all 0.3s ease;
-}
-.trail div:hover {
-  opacity: 0.6;
-}
-@media only screen and (max-width: 650px) {
-  .trail div {
-    padding: 0;
-  }
-}
-
-.active {
-  opacity: 1 !important;
+#project-section .cards-box .box:hover:before {
+  transform: scale(1);
+  opacity: 1;
 }
 
 .profile-git {
@@ -1730,6 +1502,9 @@ figcaption {
 .profile-git a i {
   font-size: 80px;
   color: #66fcf1;
+}
+.profile-git a i:hover {
+  color: #2d99ad;
 }
 .profile-git p {
   text-align: center;
