@@ -7,12 +7,14 @@
 
 html{
     scroll-behavior: smooth;
+    outline: none;
+    outline-offset: none;
+    overflow-x: hidden;
 }
 
 body {
 	background-color: $colorBlack;
     color: $colorGreyLight;
-    overflow-x: hidden;
     -ms-text-size-adjust: 100%;
 }
 
@@ -42,5 +44,11 @@ section{
     }
     @media screen and ( max-width: 400px) {
         padding: $spacing 0;
+    }
+}
+
+@media screen and ( max-width: 600px) {
+    #decoration-1, #decoration-2, #decoration-3{
+        display: none;
     }
 }
