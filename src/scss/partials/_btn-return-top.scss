@@ -1,13 +1,13 @@
 a#cRetour{
   border-radius:3px;
-  padding:10px;
+  padding: $spacing;
   font-size:15px;
   text-align:center;
   color:$colorGreen;
   background:rgba(0, 0, 0, 0.25);
   border-radius: 50%;
   position:fixed;
-  right:20px;
+  right:40px;
   opacity:1;
   z-index:99999;
   transition:all ease-in 0.2s;
@@ -29,4 +29,11 @@ a#cRetour.cInvisible{
 a#cRetour.cVisible{
   bottom:20px;
   opacity:1;
+}
+
+
+@media screen and ( max-width: 600px) {
+    a#cRetour{
+        padding: $spacing / 2;
+    }
 }
